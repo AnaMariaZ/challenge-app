@@ -76,23 +76,26 @@ ul { padding:0; margin:10px 0; list-style:none }
 
 
 li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+background: white;
+padding: 12px;
+margin-bottom: 10px;
+border-radius: 12px;
+box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+
+display: flex;
+align-items: center;
+}
+.row {
+display: flex;
+align-items: center;
+gap: 10px;
+width: 100%;
+}
+.text {
+flex: 1;
+min-width: 0;
 }
 
-.left {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex: 1;
-  min-width: 0;
-}
-
-.left span {
-  flex: 1;
-  min-width: 0;
-}
 
 input{ padding:10px; border-radius:10px; border:1px solid #ddd; width:100% }
 .inputRow{ display:flex; gap:10px }
