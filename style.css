@@ -99,7 +99,11 @@ ul {
   list-style: none;
 }
 
-li {
+.challenge-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
   background: white;
   padding: 12px;
   margin-bottom: 10px;
@@ -107,29 +111,21 @@ li {
   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
-/* 🔥 ROW - FIXUL REAL */
-.row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  width: 100%;
-}
-
 /* checkbox */
-.row input[type="checkbox"] {
+.challenge-item input[type="checkbox"] {
   width: 18px;
   height: 18px;
   flex-shrink: 0;
 }
 
 /* text */
-.row .text {
+.challenge-item .name {
   flex: 1;
   min-width: 0;
 }
 
 /* delete button */
-.row .del {
+.challenge-item .delete {
   margin-left: auto;
   background: #ef4444;
   color: white;
@@ -138,6 +134,12 @@ li {
   border-radius: 8px;
   cursor: pointer;
   flex-shrink: 0;
+}
+
+/* strike when checked */
+.challenge-item input[type="checkbox"]:checked + .name {
+  text-decoration: line-through;
+  color: #9ca3af;
 }
 
 /* =========================
