@@ -10,13 +10,31 @@ body {
   padding: 20px;
 }
 
-/* =======================
+/* =========================
+   INPUT + BUTOANE
+========================= */
+
+#newCh {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 60%;
+}
+
+button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* =========================
    LISTA CHALLENGE-URI
-======================= */
+========================= */
 
 #list {
   padding: 0;
-  margin: 0;
+  margin-top: 15px;
 }
 
 #list li {
@@ -27,7 +45,7 @@ body {
   border-radius: 10px;
 }
 
-/* ROW FIX PRINCIPAL */
+/* 🔥 FIX PRINCIPAL (checkbox + text pe același rând) */
 .row {
   display: flex;
   align-items: center;
@@ -49,38 +67,18 @@ body {
   word-break: break-word;
 }
 
-/* delete button */
+/* buton ștergere */
 .del {
   margin-left: auto;
   background: #ef4444;
   color: white;
-  border: none;
   padding: 5px 10px;
   border-radius: 6px;
-  cursor: pointer;
 }
 
-/* =======================
-   INPUT ADD CHALLENGE
-======================= */
-
-#newCh {
-  width: 70%;
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
-
-button {
-  padding: 10px 14px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-/* =======================
+/* =========================
    CALENDAR
-======================= */
+========================= */
 
 #calendar {
   display: grid;
@@ -98,12 +96,11 @@ button {
   font-size: 14px;
 }
 
-/* ziua curentă */
 .today {
   border: 2px solid #3b82f6;
 }
 
-/* culori progres */
+/* progres zile */
 .green {
   background: #22c55e;
   color: white;
@@ -124,9 +121,9 @@ button {
   color: white;
 }
 
-/* =======================
+/* =========================
    PROGRESS BAR
-======================= */
+========================= */
 
 #progressContainer {
   margin-top: 20px;
@@ -145,11 +142,13 @@ button {
   font-size: 14px;
 }
 
-/* =======================
+/* =========================
    STREAK
-======================= */
+========================= */
 
-#streak, #best, #freeze {
+#streak,
+#best,
+#freeze {
   font-weight: bold;
   margin-top: 5px;
 }
