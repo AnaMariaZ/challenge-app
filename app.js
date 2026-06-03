@@ -70,13 +70,12 @@ function renderList(){
   let li=document.createElement('li');
 
 li.innerHTML = `
-<div class="flex items-center gap-3">
-<input type="checkbox" ${checked ? 'checked' : ''} onclick="toggle(${i}, '${d}')">
-<span class="flex-1">${c}</span>
-<button class="del" onclick="delCh(${i})">Șterge</button>
+<div class="row">
+  <input type="checkbox" ${checked ? 'checked' : ''} onclick="toggle(${i}, '${d}')">
+  <span class="text">${c}</span>
+  <button class="del" onclick="delCh(${i})">Șterge</button>
 </div>
 `;
-
   ul.appendChild(li);
  });
 }
