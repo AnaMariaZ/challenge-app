@@ -64,7 +64,7 @@ display: grid;
   gap: 6px;
   width: 100%
  }
-.day { padding:10px; border-radius:10px; text-align:center; cursor:pointer; background:#e5e7eb; }
+.day { padding:8px; border-radius:10px; text-align:center; cursor:pointer; background:#e5e7eb; width: 100%;}
 .green{background:#34d399;color:white}
 .yellow{background:#fde047}
 .orange{background:#fb923c;color:white}
