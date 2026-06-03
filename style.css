@@ -11,8 +11,13 @@ body {
   overflow-x: hidden;
 }
 
-h1 { text-align:center; }
+h1 {
+  text-align: center;
+}
 
+/* =========================
+   STREAK BOX
+========================= */
 .streakBox {
   background: white;
   padding: 15px;
@@ -23,12 +28,15 @@ h1 { text-align:center; }
   box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
 
+/* =========================
+   PROGRESS BAR
+========================= */
 #progressBarContainer {
   width: 100%;
   height: 12px;
   background: #e5e7eb;
   border-radius: 999px;
-  overflow: hidden; /* 🔥 IMPORTANT */
+  overflow: hidden;
 }
 
 #progressBar {
@@ -48,57 +56,132 @@ h1 { text-align:center; }
   box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
 
-
+/* =========================
+   SECTIONS
+========================= */
 section {
-  background:white;
-  padding:20px;
-  margin:20px auto;
-  border-radius:16px;
-  max-width:600px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.05);
+  background: white;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 16px;
+  max-width: 600px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
   width: 100%;
 }
 
+/* =========================
+   CALENDAR
+========================= */
 #calendar {
-display: grid;
+  display: grid;
   grid-template-columns: repeat(7, minmax(0, 1fr));
   gap: 6px;
-  width: 100%
- }
-.day { padding:8px; border-radius:10px; text-align:center; cursor:pointer; background:#e5e7eb; width: 100%;}
-.green{background:#34d399;color:white}
-.yellow{background:#fde047}
-.orange{background:#fb923c;color:white}
-.red{background:#f87171;color:white}
-.today{border:2px solid #3b82f6}
+  width: 100%;
+}
 
-ul { padding:0; margin:10px 0; list-style:none }
+.day {
+  padding: 8px;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  background: #e5e7eb;
+  width: 100%;
+}
 
+.green { background: #34d399; color: white; }
+.yellow { background: #fde047; }
+.orange { background: #fb923c; color: white; }
+.red { background: #f87171; color: white; }
+
+.today {
+  border: 2px solid #3b82f6;
+}
+
+/* =========================
+   CHALLENGE LIST (FIXED)
+========================= */
+
+ul {
+  padding: 0;
+  margin: 10px 0;
+  list-style: none;
+}
 
 li {
-background: white;
-padding: 12px;
-margin-bottom: 10px;
-border-radius: 12px;
-box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  background: white;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 
-display: flex;
-align-items: center;
-}
-.row {
-display: flex;
-align-items: center;
-gap: 10px;
-width: 100%;
-}
-.text {
-flex: 1;
-min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
+/* checkbox */
+li input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
 
-input{ padding:10px; border-radius:10px; border:1px solid #ddd; width:100% }
-.inputRow{ display:flex; gap:10px }
+/* text */
+li .text {
+  flex: 1;
+  min-width: 0;
+}
 
-button{ padding:10px 15px; border:none; border-radius:10px; background:#3b82f6; color:white }
-.del{ background:#ef4444; flex-shrink: 0; }
+/* delete button */
+li .del {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* checked state */
+li input[type="checkbox"]:checked + .text {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+/* =========================
+   INPUT ROW
+========================= */
+
+input {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  width: 100%;
+}
+
+.inputRow {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  background: #3b82f6;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #2563eb;
+}
+
+/* delete button override safety */
+.del {
+  background: #ef4444;
+}
+.del:hover {
+  background: #dc2626;
+}
