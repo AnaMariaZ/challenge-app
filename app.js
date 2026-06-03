@@ -20,12 +20,23 @@ function save(){
  renderList(); renderCal(); renderStreak(); renderProgress();
 }
 
-function addCh(){
- let v=document.getElementById('newCh').value;
- if(!v) return;
- ch.push(v);
- document.getElementById('newCh').value='';
- save();
+function addCh() {
+  const input = document.getElementById("newCh");
+  const text = input.value.trim();
+
+  if (!text) return;
+
+  const li = document.createElement("li");
+  li.className = "challenge-item";
+
+  li.innerHTML = `
+    <input type="checkbox">
+    <span class="name">${text}</span>
+    <button class="delete" onclick="this.parentElement.remove()">X</button>
+  `;
+
+  document.getElementById("list").appendChild(li);
+  input.value = "";
 }
 
 function delCh(i){ ch.splice(i,1); save(); }
