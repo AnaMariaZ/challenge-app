@@ -89,9 +89,7 @@ li{
 
 
 .left span {
-  white-space: nowrap;
   word-break: break-word;
-  overflow: hidden;
 }
 
 
@@ -99,4 +97,4 @@ input{ padding:10px; border-radius:10px; border:1px solid #ddd; width:100% }
 .inputRow{ display:flex; gap:10px }
 
 button{ padding:10px 15px; border:none; border-radius:10px; background:#3b82f6; color:white }
-.del{ background:#ef4444 }
+.del{ background:#ef4444, flex-shrink: 0; }
