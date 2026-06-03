@@ -8,165 +8,153 @@ body {
   color: #1f2937;
   margin: 0;
   padding: 20px;
-  overflow-x: hidden;
 }
 
-h1 {
-  text-align: center;
-}
+/* =======================
+   LISTA CHALLENGE-URI
+======================= */
 
-/* =========================
-   SECTIONS
-========================= */
-
-section {
-  background: white;
-  padding: 20px;
-  margin: 20px auto;
-  border-radius: 16px;
-  max-width: 600px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-}
-
-/* =========================
-   STREAK BOX
-========================= */
-
-.streakBox {
-  background: white;
-  padding: 15px;
-  margin: 10px auto;
-  border-radius: 16px;
-  max-width: 600px;
-  text-align: center;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-}
-
-/* =========================
-   PROGRESS BAR
-========================= */
-
-#progressBarContainer {
-  width: 100%;
-  height: 12px;
-  background: #e5e7eb;
-  border-radius: 999px;
-  overflow: hidden;
-}
-
-#progressBar {
-  height: 100%;
-  width: 0%;
-  background: linear-gradient(90deg, #3b82f6, #6366f1);
-  transition: width 0.3s ease;
-}
-
-/* =========================
-   CALENDAR
-========================= */
-
-#calendar {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 6px;
-  width: 100%;
-}
-
-.day {
-  padding: 8px;
-  border-radius: 10px;
-  text-align: center;
-  cursor: pointer;
-  background: #e5e7eb;
-}
-
-.green { background: #34d399; color: white; }
-.yellow { background: #fde047; }
-.orange { background: #fb923c; color: white; }
-.red { background: #f87171; color: white; }
-
-.today {
-  border: 2px solid #3b82f6;
-}
-
-/* =========================
-   LISTĂ CHALLENGES (IMPORTANT FIX)
-========================= */
-
-ul {
+#list {
   padding: 0;
-  margin: 10px 0;
-  list-style: none;
+  margin: 0;
 }
 
-.challenge-item {
+#list li {
+  list-style: none;
+  background: white;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 10px;
+}
+
+/* ROW FIX PRINCIPAL */
+.row {
   display: flex;
   align-items: center;
   gap: 10px;
-
-  background: white;
-  padding: 12px;
-  margin-bottom: 10px;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  width: 100%;
 }
 
 /* checkbox */
-.challenge-item input[type="checkbox"] {
+.row input[type="checkbox"] {
   width: 18px;
   height: 18px;
   flex-shrink: 0;
 }
 
-/* text */
-.challenge-item .name {
+/* text challenge */
+.text {
   flex: 1;
-  min-width: 0;
+  display: block;
+  word-break: break-word;
 }
 
 /* delete button */
-.challenge-item .delete {
+.del {
   margin-left: auto;
   background: #ef4444;
   color: white;
   border: none;
-  padding: 6px 10px;
-  border-radius: 8px;
+  padding: 5px 10px;
+  border-radius: 6px;
   cursor: pointer;
-  flex-shrink: 0;
 }
 
-/* strike when checked */
-.challenge-item input[type="checkbox"]:checked + .name {
-  text-decoration: line-through;
-  color: #9ca3af;
-}
+/* =======================
+   INPUT ADD CHALLENGE
+======================= */
 
-/* =========================
-   INPUT
-========================= */
-
-input {
+#newCh {
+  width: 70%;
   padding: 10px;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-  width: 100%;
-}
-
-.inputRow {
-  display: flex;
-  gap: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
 }
 
 button {
-  padding: 10px 15px;
+  padding: 10px 14px;
   border: none;
-  border-radius: 10px;
-  background: #3b82f6;
-  color: white;
+  border-radius: 8px;
   cursor: pointer;
 }
 
-button:hover {
-  background: #2563eb;
+/* =======================
+   CALENDAR
+======================= */
+
+#calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  margin-top: 20px;
+}
+
+.day {
+  background: white;
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* ziua curentă */
+.today {
+  border: 2px solid #3b82f6;
+}
+
+/* culori progres */
+.green {
+  background: #22c55e;
+  color: white;
+}
+
+.yellow {
+  background: #eab308;
+  color: white;
+}
+
+.orange {
+  background: #f97316;
+  color: white;
+}
+
+.red {
+  background: #ef4444;
+  color: white;
+}
+
+/* =======================
+   PROGRESS BAR
+======================= */
+
+#progressContainer {
+  margin-top: 20px;
+}
+
+#progressBar {
+  height: 12px;
+  width: 0%;
+  background: #3b82f6;
+  border-radius: 20px;
+  transition: width 0.3s ease;
+}
+
+#progressText {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+/* =======================
+   STREAK
+======================= */
+
+#streak, #best, #freeze {
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+#warning {
+  margin-top: 10px;
+  color: #ef4444;
 }
