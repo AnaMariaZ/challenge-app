@@ -9,7 +9,12 @@ function today() {
   let d = new Date();
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
 }
-
+function renderStreak() {
+  document.getElementById('streak').innerText = `🔥 Streak: ${streak}`;
+  document.getElementById('best').innerText = `🏆 Best: ${bestStreak}`;
+  document.getElementById('freeze').innerText = `🧊 Freeze: ${freeze}`;
+  document.getElementById('warning').innerText = 'Nu pierde streak-ul azi!';
+}
 function save() {
   localStorage.setItem('ch', JSON.stringify(ch));
   localStorage.setItem('hist', JSON.stringify(hist));
