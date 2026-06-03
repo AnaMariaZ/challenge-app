@@ -123,25 +123,23 @@ li {
 .row {
   display: flex;
   align-items: center;
-  gap: 10px;
   width: 100%;
 }
 
 /* checkbox */
 .row input[type="checkbox"] {
-  width: 18px;
-  height: 18px;
-  cursor: pointer;
+  margin-right: 10px;
+  flex-shrink: 0;
 }
 
 /* textul ia tot spațiul */
 .row .text {
   flex: 1;
-  min-width: 0;
 }
 
 /* delete button */
 .row .del {
+  margin-left: auto;
   background: #ef4444;
   color: white;
   border: none;
