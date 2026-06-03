@@ -70,13 +70,11 @@ function renderList(){
   let li=document.createElement('li');
 
 li.innerHTML = `
-<div class="row">
-  <label class="left">
-    <input type="checkbox" ${checked?'checked':''} onclick="toggle(${i},'${d}')">
-    <span>${c}</span>
-  </label>
-  <button class="del" onclick="delCh(${i})">Șterge</button>
-</div>
+<label class="left">
+  <input type="checkbox" ${checked?'checked':''} onclick="toggle(${i},'${d}')">
+  <span>${c}</span>
+</label>
+<button class="del" onclick="delCh(${i})">Șterge</button>
 `;
   ul.appendChild(li);
  });
