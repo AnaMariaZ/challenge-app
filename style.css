@@ -1,159 +1,182 @@
-* {
-  box-sizing: border-box;
+*{
+  box-sizing:border-box;
 }
 
-body {
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  background: #f3f4f6;
-  color: #1f2937;
-  margin: 0;
-  padding: 20px;
+body{
+  margin:0;
+  background:#f4f6fb;
+  font-family:-apple-system,BlinkMacSystemFont,sans-serif;
+  color:#1f2937;
 }
 
-/* =========================
-   INPUT + BUTOANE
-========================= */
-
-#newCh {
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  width: 60%;
+.container{
+  max-width:700px;
+  margin:0 auto;
+  padding:20px;
 }
 
-button {
-  padding: 8px 12px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
+h1{
+  text-align:center;
+  margin-bottom:20px;
 }
 
-/* =========================
-   LISTA CHALLENGE-URI
-========================= */
-
-#list {
-  padding: 0;
-  margin-top: 15px;
+.card{
+  background:white;
+  border-radius:18px;
+  padding:18px;
+  margin-bottom:18px;
+  box-shadow:0 4px 15px rgba(0,0,0,.08);
 }
 
-#list li {
-  list-style: none;
-  background: white;
-  padding: 10px;
-  margin-bottom: 8px;
-  border-radius: 10px;
+.streakBox{
+  text-align:center;
 }
 
-/* 🔥 FIX PRINCIPAL (checkbox + text pe același rând) */
-.row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  width: 100%;
+#streak{
+  color:#f97316;
+  margin:8px 0;
 }
 
-/* checkbox */
-.row input[type="checkbox"] {
-  width: 18px;
-  height: 18px;
-  flex-shrink: 0;
+#best{
+  color:#3b82f6;
+  margin:6px 0;
 }
 
-/* text challenge */
-.text {
-  flex: 1;
-  display: block;
-  word-break: break-word;
+#freeze{
+  color:#06b6d4;
+  margin:6px 0;
 }
 
-/* buton ștergere */
-.del {
-  margin-left: auto;
-  background: #ef4444;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 6px;
+#warning{
+  color:#ef4444;
+  font-weight:600;
+  margin-top:12px;
 }
 
-/* =========================
-   CALENDAR
-========================= */
+/* progress */
 
-#calendar {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 6px;
-  margin-top: 20px;
+#progressBarContainer{
+  width:100%;
+  height:14px;
+  background:#e5e7eb;
+  border-radius:999px;
+  overflow:hidden;
 }
 
-.day {
-  background: white;
-  padding: 10px;
-  text-align: center;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 14px;
+#progressBar{
+  width:0%;
+  height:100%;
+  background:#3b82f6;
+  transition:.3s;
 }
 
-.today {
-  border: 2px solid #3b82f6;
+#progressText{
+  margin-top:8px;
+  font-size:14px;
 }
 
-/* progres zile */
-.green {
-  background: #22c55e;
-  color: white;
+/* calendar */
+
+#calendar{
+  display:grid;
+  grid-template-columns:repeat(7,1fr);
+  gap:6px;
 }
 
-.yellow {
-  background: #eab308;
-  color: white;
+.day{
+  background:#f3f4f6;
+  border-radius:10px;
+  padding:10px;
+  text-align:center;
+  cursor:pointer;
+  transition:.2s;
 }
 
-.orange {
-  background: #f97316;
-  color: white;
+.day:hover{
+  transform:translateY(-2px);
 }
 
-.red {
-  background: #ef4444;
-  color: white;
+.today{
+  border:2px solid #3b82f6;
 }
 
-/* =========================
-   PROGRESS BAR
-========================= */
-
-#progressContainer {
-  margin-top: 20px;
+.green{
+  background:#22c55e;
+  color:white;
 }
 
-#progressBar {
-  height: 12px;
-  width: 0%;
-  background: #3b82f6;
-  border-radius: 20px;
-  transition: width 0.3s ease;
+.yellow{
+  background:#eab308;
+  color:white;
 }
 
-#progressText {
-  margin-top: 5px;
-  font-size: 14px;
+.orange{
+  background:#f97316;
+  color:white;
 }
 
-/* =========================
-   STREAK
-========================= */
-
-#streak,
-#best,
-#freeze {
-  font-weight: bold;
-  margin-top: 5px;
+.red{
+  background:#ef4444;
+  color:white;
 }
 
-#warning {
-  margin-top: 10px;
-  color: #ef4444;
+/* challenge list */
+
+#list{
+  padding:0;
+  margin:0 0 15px 0;
+}
+
+#list li{
+  list-style:none;
+  background:#f9fafb;
+  border-radius:10px;
+  padding:10px;
+  margin-bottom:8px;
+}
+
+.row{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.row input[type="checkbox"]{
+  width:18px;
+  height:18px;
+}
+
+.text{
+  flex:1;
+}
+
+.del{
+  background:#ef4444;
+  color:white;
+  border:none;
+  border-radius:8px;
+  padding:6px 10px;
+}
+
+.inputRow{
+  display:flex;
+  gap:10px;
+}
+
+#newCh{
+  flex:1;
+  padding:10px;
+  border:1px solid #d1d5db;
+  border-radius:10px;
+}
+
+.inputRow button{
+  background:#3b82f6;
+  color:white;
+}
+
+/* details */
+
+#dayDetails{
+  line-height:1.8;
 }
