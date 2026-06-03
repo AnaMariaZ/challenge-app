@@ -141,6 +141,7 @@ li .del {
   border-radius: 8px;
   cursor: pointer;
   flex-shrink: 0;
+  margin-left: auto;
 }
 
 /* checked state */
