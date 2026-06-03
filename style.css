@@ -78,7 +78,6 @@ ul { padding:0; margin:10px 0; list-style:none }
 li {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 10px;
 }
 
@@ -87,10 +86,12 @@ li {
   align-items: center;
   gap: 10px;
   flex: 1;
+  min-width: 0;
 }
 
 .left span {
   flex: 1;
+  min-width: 0;
 }
 
 input{ padding:10px; border-radius:10px; border:1px solid #ddd; width:100% }
