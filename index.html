@@ -9,44 +9,48 @@
 </head>
 <body>
 
-<h1>🏆 Challenge Tracker</h1>
+<div class="container">
 
-<div class="streakBox">
-  <h2 id="streak"></h2>
-  <p id="best"></p>
-  <p id="freeze"></p>
-  <p id="warning"></p>
-</div>
+  <h1>🏆 Challenge Tracker</h1>
 
-<div class="progressBox">
-  <div id="progressBarContainer">
-    <div id="progressBar"></div>
+  <div class="card streakBox">
+    <h2 id="streak"></h2>
+    <p id="best"></p>
+    <p id="freeze"></p>
+    <p id="warning"></p>
   </div>
-  <p id="progressText"></p>
-</div>
-``
 
-<section>
-<h2>Calendar</h2>
-<div id="calendar"></div>
-</section>
-
-<section>
-<section>
-  <h2>Challenge-uri</h2>
-  <ul id="list"></ul>
-  <div class="inputRow">
-    <input id="newCh" placeholder="Adaugă challenge">
-    <button onclick="addCh()">Adaugă</button>
+  <div class="card progressBox">
+    <div id="progressBarContainer">
+      <div id="progressBar"></div>
+    </div>
+    <p id="progressText"></p>
   </div>
-</section>
-</section>
 
-<section>
-<h2>Detalii zi</h2>
-<div id="dayDetails">Selectează o zi</div>
-</section>
+  <section class="card">
+    <h2>Calendar</h2>
+    <div id="calendar"></div>
+  </section>
+
+  <section class="card">
+    <h2>Challenge-uri</h2>
+
+    <ul id="list"></ul>
+
+    <div class="inputRow">
+      <input id="newCh" placeholder="Adaugă challenge">
+      <button onclick="addCh()">Adaugă</button>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Detalii zi</h2>
+    <div id="dayDetails">Selectează o zi</div>
+  </section>
+
+</div>
 
 <script src="app.js"></script>
+
 </body>
 </html>
