@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Challenge Tracker</title>
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🏆 Challenge Tracker</h1>
+
+<div class="streakBox">
+  <h2 id="streak"></h2>
+  <p id="best"></p>
+  <p id="freeze"></p>
+  <p id="warning"></p>
+</div>
+
+<div class="progressBox">
+  <div id="progressBarContainer">
+    <div id="progressBar"></div>
+  </div>
+  <p id="progressText"></p>
+</div>
+``
+
+<section>
+<h2>Calendar</h2>
+<div id="calendar"></div>
+</section>
+
+<section>
+<h2>Challenge-uri</h2>
+<ul id="list"></ul>
+<div class="inputRow">
+<input id="newCh" placeholder="Adaugă challenge">
+<button onclick="addCh()">Adaugă</button>
+</div>
+</section>
+
+<section>
+<h2>Detalii zi</h2>
+<div id="dayDetails">Selectează o zi</div>
+</section>
+
+<script src="app.js"></script>
+</body>
+</html>

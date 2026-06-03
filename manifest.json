@@ -1,0 +1,6 @@
+{
+  "name": "Challenge",
+  "short_name": "Challenge",
+  "start_url": ".",
+  "display": "standalone"
+}
