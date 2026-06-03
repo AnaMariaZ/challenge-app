@@ -74,17 +74,12 @@ display: grid;
 
 ul { padding:0; margin:10px 0; list-style:none }
 
-li {
-  display: block;
-  align-items: flex-start;   /* 🔥 important */
-  gap: 10px;
-}
 
-.row {
+li {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 10px;
-  width: 100%;
 }
 
 .left {
@@ -92,7 +87,6 @@ li {
   align-items: center;
   gap: 10px;
   flex: 1;
-  min-width: 0;
 }
 
 .left span {
