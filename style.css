@@ -82,13 +82,16 @@ li{
   margin:6px 0;
   background:#f9fafb;
   border-radius:10px;
+  gap: 10px;
 }
 
-.left{ display:flex; align-items:center; gap:12px;}
+.left{ display:flex; align-items:center; gap:10px; flex: 1; min-width: 0;}
 
 
 .left span {
   white-space: nowrap;
+  word-break: break-word;
+  overflow: hidden;
 }
 
 
