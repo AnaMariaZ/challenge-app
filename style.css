@@ -1,9 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   background: #f3f4f6;
   color: #1f2937;
   margin: 0;
   padding: 20px;
+  overflow-x: hidden;
 }
 
 h1 { text-align:center; }
