@@ -74,24 +74,25 @@ display: grid;
 
 ul { padding:0; margin:10px 0; list-style:none }
 
-li{
-  display:flex;
-  justify-content:space-between;
-  align-items: center;
-  padding:12px 16px;
-  margin:6px 0;
-  background:#f9fafb;
-  border-radius:10px;
+li {
+  display: flex;
+  align-items: flex-start;   /* 🔥 important */
   gap: 10px;
-  flex-wrap: nowrap;
 }
 
-.left{ display:flex; align-items:center; gap:10px; flex: 1;}
+
+.left {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  flex: 1;          /* 🔥 ia tot spațiul disponibil */
+}
 
 
 .left span {
-  display: inline-block;
+  flex: 1;          /* 🔥 permite textului să stea în spațiul rămas */
 }
+
 
 
 input{ padding:10px; border-radius:10px; border:1px solid #ddd; width:100% }
